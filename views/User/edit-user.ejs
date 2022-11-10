@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEDEOS</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="align">
+  <div class="grid">
+    <h1 class="h_table" style="margin-left: 1rem;">Actualizar usuario</h1>
+    <form action="/edit-user" method="POST" class="form login">
+      <input type="hidden" name="id" value="<%= getUserData.id %>">
+      <div class="form__field">
+        <label for="nombre_usuario"><svg class="icon">
+            <use xlink:href="#icon-user"></use>
+          </svg><span class="hidden">Nombre de usuario</span></label>
+        <input id="nombre_usuario" type="text" name="nombre_usuario" class="form__input" placeholder="Usuario" value="<%= getUserData.nombre_usuario %>">
+      </div>
+      <div class="form__field">
+        <label for="correo"><svg class="icon">
+            <use xlink:href="#icon-user"></use>
+          </svg><span class="hidden">Correo</span></label>
+        <input id="correo" type="email" name="correo" class="form__input" placeholder="Correo" value="<%= getUserData.correo %>">
+      </div>
+      <div class="form__field">
+        <label for="telefono"><svg class="icon">
+            <use xlink:href="#icon-user"></use>
+          </svg><span class="hidden">Telefono</span></label>
+        <input id="telefono" type="text" name="telefono" class="form__input" placeholder="Telefono" value="<%= getUserData.telefono %>">
+      </div>
+      <div class="form__field">
+        <label for="ciudad"><svg class="icon">
+            <use xlink:href="#icon-user"></use>
+          </svg><span class="hidden">Ciudad</span></label>
+        <input id="ciudad" type="text" name="ciudad" class="form__input" placeholder="Ciudad" value="<%= getUserData.ciudad %>">
+      </div>
+      <div class="form__field">
+        <label for="Provincia"><svg class="icon">
+            <use xlink:href="#icon-user"></use>
+          </svg><span class="hidden">Provincia</span></label>
+        <select name="provincia" id="provincia" class="form-select">
+          <option value="<%= getUserData.provincia %>" selected>
+            <%= getUserData.provincia %>
+          <option value="MZ">Mendoza</option>
+          <option value="SL">San Luis</option>
+          <option value="CD">Cordoba</option>
+          <option value="LR">La Rioja</option>
+          <option value="SJ">San Juan</option>
+          <option value="CB">Chubut</option>
+          <option value="LP">La Pampa</option>
+          <option value="BA">Buenos Aires</option>
+          <option value="SF">Santa Fe</option>
+          <option value="CO">Corrientes</option>
+          <option value="MS">Misiones</option>
+          <option value="ST">Salta</option>
+          <option value="TM">Tucuman</option>
+          <option value="CA">Catamarca</option>
+          <option value="ER">Entre Rios</option>
+          <option value="RN">Rio Negro</option>
+          <option value="TF">Tierra del Fuego</option>
+          <option value="SE">Santiago del estero</option>
+          <option value="CH">Chaco</option>
+          <option value="JJ">Jujuy</option>
+          <option value="NQ">Neuquen</option>
+          <option value="FO">Formosa</option>
+          <option value="SC">Santa Cruz</option>
+        </select>
+      </div>
+      <div class="form__field">
+        <label for="contrasena"><svg class="icon">
+            <use xlink:href="#icon-lock"></use>
+          </svg><span class="hidden">Ciudad</span></label>
+        <input id="contrasena" type="password" name="contrasena" class="form__input" placeholder="Contraseña" value="<%= getUserData.contrasena %>" >
+      </div>
+      <div class="form__field">
+        <input type="submit" value="Actualizar datos del usuario">
+      </div>
+      <p class="text--center" style="font-size: 1.2rem;"><a href="/list-user">Regresar</a></p>
+      </div>
+    </form>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" class="icons">
+    <symbol id="icon-arrow-right" viewBox="0 0 1792 1792">
+      <path d="M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H245q-52 0-84.5-37.5T128 1024V896q0-53 32.5-90.5T245 768h704L656 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z" />
+    </symbol>
+    <symbol id="icon-lock" viewBox="0 0 1792 1792">
+      <path d="M640 768h512V576q0-106-75-181t-181-75-181 75-75 181v192zm832 96v576q0 40-28 68t-68 28H416q-40 0-68-28t-28-68V864q0-40 28-68t68-28h32V576q0-184 132-316t316-132 316 132 132 316v192h32q40 0 68 28t28 68z" />
+    </symbol>
+    <symbol id="icon-user" viewBox="0 0 1792 1792">
+      <path d="M1600 1405q0 120-73 189.5t-194 69.5H459q-121 0-194-69.5T192 1405q0-53 3.5-103.5t14-109T236 1084t43-97.5 62-81 85.5-53.5T538 832q9 0 42 21.5t74.5 48 108 48T896 971t133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5T896 896 624.5 783.5 512 512t112.5-271.5T896 128t271.5 112.5T1280 512z" />
+    </symbol>
+  </svg>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
